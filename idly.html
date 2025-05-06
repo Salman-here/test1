@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>idly</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header{
+            width: 100%;
+            height: 140vh;
+            background-image: url(./images/front-page-header.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        nav{
+            width: 100%;
+            height: 17vh;
+            padding: 0.1px;
+        }
+        #logo-div{
+            height: 11vh;
+            width: 180px;
+            margin-left: 70px;
+            margin-top: 3vh;
+            cursor: pointer;
+        }
+        #nav-ul{
+            width: 755px;
+            font-size: 17px;
+            font-weight: 900;
+            line-height: 26px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+            color: white;
+            margin-left: 453px;
+            margin-top: -37px;
+        }
+         li{
+            list-style: none;
+            display: inline;
+            margin-left: 40px;
+            cursor: pointer;
+            transition: 0.7s;
+         }
+         li:hover{
+            color: rgb(255, 222, 0);
+         }
+         #main-box{
+            width: 80%;
+            height: auto;
+            /* background-color: red; */
+            margin-left: 10%;
+            margin-top: 230px;
+            text-align: center;
+         }
+         #main-box h1{
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 88px;
+            color: white;
+         }
+         #main-box p{
+            font-size: 15px;
+            color: white;
+            width: 75%;
+            margin-left: 12.5%;
+            margin-top: 38px;
+            /* background-color: green; */
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+         }
+         .main-btn{
+            width: 230px;
+            height: 60px;
+            border: 3px solid white;
+            color: white;
+            font-size: 18px;
+            margin-top: 58px;
+            border-radius: 3px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-left: 30px;
+         }
+         .btn1{
+            background-color: rgba(0, 0, 0, 0.152);
+            cursor: pointer;
+            transition: .3s;
+         }
+         .btn1:hover{
+            background-color: rgba(0, 0, 0, 0.036);
+         }
+         .btn2{
+            background-color: rgb(255, 222, 0) ;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+         }
+         .btn2:hover{
+            background-color: #6A4D8A;
+         }
+         #sec1{
+            width: 100%;
+            height: 75vh;
+         }
+         #sec1 h1{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #545454;
+            font-size: 35px;
+            margin-left: 45%;
+            margin-top: 70px;
+         }
+         .t1{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            width: 70%;
+            text-align: center;
+            line-height: 26px;
+            margin-left: 15%;
+            margin-top: 45px;
+            color: #8B95A1;
+         }
+         #sec1-main{
+            width: 100%;
+            height: 25vh;
+            /* background-color: rgb(160, 123, 123); */
+            margin-top: 80px;
+            padding: 0.1px;
+         }
+         .sec1-child{
+            width: 28%;
+            height: 90%;
+            /* background-color: black; */
+            padding: 0.1px;
+         }
+         .sec1-child1{
+            margin-top: 8px;
+            margin-left: 50px;
+         }
+         .sec1-child2{
+            margin-left: 460px;
+            margin-top: -145px;
+         }
+         .sec1-child3{
+            margin-left: 870px;
+            margin-top: -145px;
+         }
+         .full-line{
+            width:100%;
+            height: 2px;
+            background-color:#EBEBEB;
+            margin-top:20%;
+            padding: 0.1px;
+         }
+         .half-line{
+            height: 4px;
+            background-color: pink;
+            margin-top: -1px;
+            padding: 0.1px;
+         }
+         .circle{
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background-color: green;
+            margin-top: -3px;
+            margin-left: 99%;
+            padding: 0.1px;
+         }
+         .percent{
+            width: 60px;
+            height: 70px;
+            background-color: white;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 35%, 59% 35%, 49% 49%, 39% 35%, 0 34%);
+            margin-top: -88px;
+            margin-left: -23.5px;
+
+         }
+         .percent1{
+            background-color: #F18B6D;
+         }
+         .percent2{
+            background-color:#F1D205;
+         }
+         .percent3{
+            background-color:#6A4D8A;
+         }
+         .percent p{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 14px;
+            width: 70%;
+            text-align: center;
+            line-height: 26px;
+            margin-left: 15%;
+            margin-top: 45px;
+            color: white;
+         }
+         .half-line1{
+            background-color: #F18B6D;
+            width: 60%;
+         }
+         .half-line2{
+            background-color: #F1D205;
+            width: 82%;
+         }
+         .half-line3{
+            background-color: #6A4D8A;
+            width: 86%;
+         }
+         .circle1{
+            background-color: #F18B6D;
+         }
+         .circle2{
+            background-color: #F1D205;
+         }
+         .circle3{
+            background-color: #6A4D8A;
+         }
+         #t2{
+            margin-top: 20px;
+            margin-left: 30px;
+            color: #F18B6D;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+         }
+         #t3{
+            color:#F1D205;
+            margin-top: 20px;
+            margin-left: 30px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+         }
+         #t4{
+            color: #6A4D8A;
+            margin-top: 20px;
+            margin-left: 30px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            
+         }
+
+         #sec2{
+            width: 100%;
+            height: 70vh;
+            background-color: #F6F6F6;
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 0.1px;
+         }
+         #sec2 h1{
+            color: #545454;
+            margin-top: 65px;
+            font-size: 40px;
+
+         }
+         #sec2 p{
+            color: #8C9597;
+            margin-top: 10px;
+         }
+         .sec2-child{
+            width: 25%;
+            height: 50%;
+            background-color: rebeccapurple;
+            margin-top: 50px;
+            cursor: pointer;
+         }
+         .sec2-child2{
+            margin-left: 25%;
+            margin-top: -227px;
+         }
+         .sec2-child3{
+            margin-left: 50%;
+            margin-top: -227px;
+         }
+         .sec2-child4{
+            margin-left: 75%;
+            margin-top: -227px;
+         }
+         .sec2-child img{
+            width: 100%;
+            height: 130%;
+         }
+         #sec3{
+            width: 100%;
+            height: 100vh;
+            background-image: url(./images/testiomnials-background.jpeg);
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 0.1px;
+         }
+         #sec3 h1{
+            color: white;
+            margin-top: 80px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 40px;
+
+         }
+         .img1{
+            width: 130px;
+            height: 130px;
+            background-color: black;
+            border-radius: 100%;
+            margin-left: 44%;
+         }
+         .img1 img{
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+
+         }
+         .test{
+            width: 75%;
+            height: 70%;
+            margin-top: 50px;
+            /* background-color: green; */
+            margin-left: 12%;
+            padding: 0.1px;
+         }
+         .msg1{
+            clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 53% 90%, 51% 100%, 49% 90%, 0 90%);
+            width: 100%;
+            height: 40%;
+            background-color:#6A4D8A;
+            margin-top: 40px;
+            padding: 0.1px;
+         }
+         .msg1 p{
+            color: #FFFFFF;
+            text-align: center;
+            width: 82%;
+            margin-left: 9%;
+            margin-top: 40px;
+            line-height: 26px;
+         }
+         .test h2{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 25px;
+            color: #EBEBEB;
+            margin-top: 10px;
+         }
+
+            #sec4{
+            width: 100%;
+            height: 70vh;
+            background-color: #F6F6F6;
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 0.1px;
+         }
+
+            .ser-h1{
+            color: #545454;
+            margin-top: 65px;
+            font-size: 40px;
+
+         }
+         #sec4 p{
+            color: #8C9597;
+            margin-top: 10px;
+         }
+         #services-main{
+            width: 90%;
+            height: 60%;
+            /* background-color: red; */
+            margin-left: 5%;
+            margin-top: 60px;
+            padding: 0.1px;
+         }
+         .sec4-child{
+            width: 30%;
+            height: 90%;
+            /* background-color: rebeccapurple; */
+            margin-top: 10px;
+            cursor: pointer;
+            margin-left: 20px;
+            padding: 0.1px;
+            text-align: center;
+         }
+         .sec4-child2{
+            margin-left: 35%;
+            margin-top: -243px;
+         }
+         .sec4-child3{
+            margin-left: 68%;
+            margin-top: -243px;
+         }
+         .sec4-child1 h1{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 10px;
+            color: #F18B6D;
+         }
+          .sec4-child p{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 20px !important;
+            color: #8B95A1;
+            line-height: 26px;
+            font-size: 15px;
+         }
+         .sec4-child2 h1{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 10px;
+            color:#F1D205;
+         }
+         .sec4-child3 h1{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 10px;
+            color:#6A4D8A;
+         }
+         .sec4-child i{
+            font-size: 30px;
+            color: #F18B6D;
+
+         }
+         .sec4-child2 i{
+            font-size: 30px;
+            color:#F1D205;
+
+         }
+         .sec4-child3 i{
+            font-size: 30px;
+            color:#6A4D8A;
+
+         }
+         #sec5{
+            width: 100%;
+            height: 130vh;
+            text-align: center;
+            background-color: #222F36;
+            padding: 0.1px;
+         }
+         .latest-h1{
+            color: white;
+            margin-top: 65px;
+            font-size: 40px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+         }
+         .para1{
+            color: #8C9597;
+            margin-top: 10px;
+         }
+         .sec5-child{
+            width: 30%;
+            height: 90%;
+            background-color:#FFFFFF;
+            margin-top: 25px;
+            margin-left: 20px;
+            padding: 0.1px;
+            display: inline-block;
+            text-align: start;
+            vertical-align: top;
+         }
+         .sec5-child h1{
+            width: 80%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #5E5E5E;
+            margin-left: 35px;
+            margin-top: 30px;
+            line-height: 36px;
+         }
+         .sec5-child p{
+            margin-left:35px;
+            margin-top: 20px;
+            color: #8C9597;
+            line-height: 26px;
+            width: 80%;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+         }
+         #sec5-main{
+            width: 95%;
+            height: 65%;
+            /* background-color: red; */
+            margin-left: 1.7%;
+            margin-top: 80px;
+            padding: 0.1px;
+         }
+         .sec5-child2{
+            height: 97%;
+            margin-top: 25px;
+         }
+         .sec5-child img{
+            width: 100%;
+         }
+         .sec5-child a{
+            color: #F1D205;
+            margin-left: 35px;
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+         }
+         .sec5-child a:hover{
+            color: #6A4D8A;
+         }
+         #sec6{
+            width: 100%;
+            height: 33vh;
+            background-image: url(./images/front-page-counter.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position:center;
+         }
+         .sec6-div{
+            width: 30%;
+            height: 60%;
+            display: inline-block;
+            /* background-color:l red; */
+            margin-top: 40px;
+            margin-left: 30px;
+            text-align: center;
+         }
+         .sec6-div2{
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+
+         }
+         .sec6-div h1{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 60px;
+            color: white;
+            margin-top: 10px;
+         }
+         .sec6-div h2{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 23px;
+            color: white;
+            
+         }
+
+
+
+         #sec7{
+            width: 100%;
+            height: 70vh;
+            background-color: #F6F6F6;
+            text-align: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 0.1px;
+         }
+
+            .team-h1{
+            color: #545454;
+            margin-top: 65px;
+            font-size: 40px;
+         }
+         #sec7 p{
+            color: #8C9597;
+            margin-top: 10px;
+         }
+         #team-main{
+            width: 90%;
+            height: 60%;
+            /* background-color: red; */
+            margin-left: 5%;
+            margin-top: 60px;
+            padding: 0.1px;
+         }
+         .sec7-child{
+            width: 30%;
+            height: 90%;
+            /* background-color: rebeccapurple; */
+            margin-top: 10px;
+            cursor: pointer;
+            margin-left: 20px;
+            padding: 0.1px;
+            text-align: start;
+         }
+         .sec7-child h1{
+            color: #5E5E5E;
+         }
+         .sec7-child1 h2{
+            color: #F18B6D;
+            font-size: 16px;
+            font-weight: 100;
+            margin-top: 8px;
+
+         }
+         .sec7-child2 h2{
+            color:#F1D205;
+            font-size: 16px;
+            font-weight: 100;
+            margin-top: 8px;
+         }
+         .sec7-child3 h2{
+            color:#6A4D8A;
+            font-size: 16px;
+            font-weight: 100;
+            margin-top: 8px;
+         }
+         .sec7-child2{
+            margin-left: 35%;
+            margin-top: -243px;
+         }
+         .sec7-child3{
+            margin-left: 68%;
+            margin-top: -243px;
+         }
+         .sec7-child1 h1{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 10px;
+         }
+          .sec7-child p{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 20px !important;
+            color: #8B95A1;
+            line-height: 26px;
+            font-size: 15px;
+            /* width: 60%; */
+         }
+         .sec7-child2 h1{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 10px;
+         }
+         .sec7-child3 h1{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-top: 10px;
+         }
+
+         .sec7-child i{
+            font-size: 15px;
+            color: #F18B6D;
+            margin-left: 2px;
+            margin-top: 5px;
+
+         }
+         .sec7-child2 i{
+            font-size: 15px;
+            color:#F1D205;
+            
+
+         }
+         .sec7-child3 i{
+            font-size: 15px;
+            color:#6A4D8A;
+            
+
+         }
+         .info2{
+            display: inline-block;
+            width: 60%;
+            height: 80%;
+            /* background-color: green; */
+            margin-top: 20px;
+            margin-left: 10px;
+         }
+         .sec7-img{
+            width: 120px;
+            height: 120px;
+            background-color: gray;
+            border-radius: 100%;
+            display: inline-block;
+            margin-top: 30px;
+            vertical-align: top;
+
+         }
+         .sec7-img img{
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+         }
+         #sec8{
+            width: 100%;
+            height: 110vh;
+            /* background-color: gray; */
+            padding: 0.1px;
+         }
+         #sec8 h1{
+            text-align: center;
+            margin-top: 50px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 38px;
+            color: #545454;
+         }
+         .add1{
+            margin-top: 70px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 15px;
+            color:#F1D205;
+            margin-left: 100px;
+         }
+         .add2{
+            margin-top: -20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 15px;
+            width: 250px;
+            line-height: 26px;
+            color:#96ADB5;
+            margin-left: 180px;
+            border-left: .5px solid #96adb584;
+            padding-left:30px ;
+         }
+
+         .add3{
+            margin-top: -50px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 15px;
+            color:#F1D205;
+            margin-left: 500px;
+         }
+         .add4{
+            margin-top: -20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 15px;
+            width: 250px;
+            line-height: 26px;
+            color:#96ADB5;
+            margin-left: 660px;
+            border-left: .5px solid #96adb561;
+            padding-left:30px ;
+         }
+         .input{
+            width: 350px;
+            height: 45px;
+            font-size: 15px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* background-color: red; */
+            color: #8C9597;
+            display: inline-block;
+            margin-top: 60px;
+            margin-left: 60px;
+         }
+         #name{
+            display: block;
+            width: 100%;
+            height: 80%;
+            font-size: 20px;
+            color: #8C9597;
+            padding-left:10px ;
+            margin-top: 8px;
+            border: 1px solid #96adb555;
+         }
+
+         .input2{
+            width: 1180px;
+            height: 250px;
+            font-size: 15px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* background-color: red; */
+            color: #8C9597;
+            display: inline-block;
+            margin-top: 20px;
+            margin-left: 60px;
+         }
+         .send{
+            width: 150px;
+            height: 45px;
+            background-color:#F1D205;
+            border: none;
+            font-size: 18px;
+            color: white;
+            border-radius: 5px;
+            margin-left: 1095px;
+            margin-top: 10px;
+         }
+         .sec9{
+            width: 100%;
+            height: 50vh;
+            background-color: #292825;
+            padding: 0.1px;
+         }
+         .last{
+            width: 15%;
+            height: 210px;
+            margin-top: 50px;
+            margin-left: 70px;
+            /* background-color: gray; */
+            display: inline-block;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+         }
+         .last h1{
+            color: white;
+         }
+         .last p{
+            color:#8C9597;
+            margin-top: 25px;
+         }
+
+         .copy{
+            width: 100%;
+            height: 80px;
+            background-color: #242320;
+            margin-top:37px;
+            text-align: center;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 0.1px;
+            /* display: inline-block; */
+         }
+         h5{
+            margin-top: 32px;
+         }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <div id="logo-div">
+                <img title="Ildy Theme Demo" id="logo" src="./images/cropped-footer-logo-1.png" alt="">
+            </div>
+            <ul id="nav-ul">
+                <li>About</li>
+                <li>Portfolio</li>
+                <li>Testimonials</li>
+                <li>Services</li>
+                <li>Blog</li>
+                <li>Our Team</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+        <div id="main-box">
+            <h1>Cleans<span style="color:rgb(255, 222, 0) ;">.</span>Slick<span style="color:rgb(255, 222, 0) ;">.</span>Pixel Perfect</h1>
+            <p>lldy is a great one-page theme, perfect for developers and designers but also for someone who just wants a new website for his business. Try it now!</p>
+            <button class="btn1 main-btn">Learn More</button>
+            <button class="btn2 main-btn">Download</button>
+        </div>
+    </header>
+
+    <section id="sec1">
+        <h1>About</h1>
+        <p class="t1">It is an amazng one-page theme with great features that offers an incredible experience. It is easy to install, make changes, adapt for your business. A modern design with clean lines and styling for a wide variety of content, exactly how a business design should be. You can add as many images as you want to the main header area and turn them into slider.</p>
+
+        <div id="sec1-main">
+            <div class="sec1-child1 sec1-child">
+                <div class="full-line">
+                    <div class="half-line half-line1">
+                        <div class="circle circle1">
+                            <div class="percent percent1">
+                                <p>60%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p id="t2">Typography</p>
+            </div>
+            <div class="sec1-child2 sec1-child">
+                <div class="full-line">
+                    <div class="half-line half-line2">
+                        <div class="circle circle2">
+                            <div class="percent percent2">
+                                <p>82%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p id="t3">Design</p>
+            </div>
+            <div class="sec1-child3 sec1-child">
+                <div class="full-line">
+                    <div class="half-line half-line3">
+                        <div class="circle circle3">
+                            <div class="percent percent3">
+                                <p>86%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p id="t4">Development</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sec2">
+        <h1>Projects</h1>
+        <p>You'll love our work. Check it out!</p>
+
+        <div class="sec2-child1 sec2-child">
+            <img src="./images/front-page-project-4.jpg" alt="">
+        </div>
+        <div class="sec2-child2 sec2-child">
+            <img src="./images/front-page-project-3.jpg" alt="">
+        </div>
+        <div class="sec2-child3 sec2-child">
+            <img src="./images/front-page-project-2.jpg" alt="">
+        </div>
+        <div class="sec2-child4 sec2-child">
+            <img src="./images/front-page-project-1.jpg" alt="">
+        </div>
+    </section>
+
+    <section id="sec3">
+        <h1>Testimonials</h1>
+        <div class="test">
+            <div class="img1">
+            <img src="./images/front-page-team-3.jpg" alt="">
+            </div>
+            <div class="msg1">
+               <p>"Awesome theme with great design and awesome support. If you don’t know how to code your own WordPress theme, but you still want a good-looking website for your business, Illdy might be exactly what you need. It is a slick theme with a lot of of features to choose from."</p>
+            </div>
+            <h2>Mike Muller</h2>
+        </div>
+
+    </section>
+
+   <section id="sec4">
+        <h1 class="ser-h1">Services</h1>
+        <p>In order to help you grow your business, our carefully selected experts can advise you in in the following areas:</p>
+       <div id="services-main">
+        <div class="sec4-child1 sec4-child">
+      <i class="fa-solid fa-pencil"></i>
+         <h1>Web Design</h1>
+         <p>Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt tempus. Aliquam a leo risus. Fusce a metus non augue dapibus porttitor at in mauris. Pellentesque commodo...</p>
+        </div>
+        <div class="sec4-child2 sec4-child">
+         <i class="fa-solid fa-code"></i>
+         <h1>Web Decelopment</h1>
+         <p>Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt tempus. Aliquam a leo risus. Fusce a metus non augue dapibus porttitor at in mauris. Pellentesque commodo...</p>
+        </div>
+        <div class="sec4-child3 sec4-child">
+         <i class="fa-solid fa-magnifying-glass"></i>
+         <h1>SEO Analisys</h1>
+         <p>Consectetur adipiscing elit. Praesent molestie urna hendrerit erat tincidunt tempus. Aliquam a leo risus. Fusce a metus non augue dapibus porttitor at in mauris. Pellentesque commodo...</p>
+        </div>
+            </div>
+    </section>
+
+
+    <section id="sec5">
+      <h1 class="latest-h1">Latest News</h1>
+      <p class="para1">If you are interested in the latest articles in the industry, take a sneak peek at our blog. You have nothing to loose!</p>
+     <div id="sec5-main">
+      <div class="sec5-child1 sec5-child">
+         <img src="./images/photo-1449168013943-3a15804bb41c-360x213.jpg" alt="">
+       <h1>We Have Made Illdy Theme SEO Friendly</h1>
+       <p>Illdy One Page WordPress theme is fully SEO friendly and is ready to help you to achieve the highest rankings…</p>
+       <a href="">Read more</a>
+      </div>
+      <div class="sec5-child2 sec5-child">
+         <img src="./images/photo-1450101215322-bf5cd27642fc-360x213.jpg" alt="">
+       <h1>Stunning One Page WordPress Theme For Masses</h1>
+       <p>This theme is not just free, it is free for private and commercial use since it is licensed under GPL…</p>
+       <a href="">Read more</a>
+      </div>
+      <div class="sec5-child3 sec5-child">
+         <img src="./images/photo-1447687643809-e05fd462f350-360x213.jpg" alt="">
+       <h1>Hello world!</h1>
+       <p>Welcome to colorlib.com. This is our first post around Illdy WordPress theme. Now show that you can make out of it.…</p>
+       <a href="">Read more</a>
+      </div>
+          </div>
+  </section>
+
+  <section id="sec6">
+   <div class="sec6-div">
+      <h1>286</h1>
+      <h2>Projects</h2>
+   </div>
+   <div class="sec6-div sec6-div2">
+      <h1>169</h1>
+      <h2>Clients</h2>
+   </div>
+   <div class="sec6-div">
+      <h1>286</h1>
+      <h2>Coffee</h2>
+   </div>
+
+  </section>
+
+
+  <section id="sec7">
+   <h1 class="team-h1">Team</h1>
+   <p>Meet the people that are going to take your business to the next level.</p>
+  <div id="team-main">
+   <div class="sec7-child1 sec7-child">
+      <div class="sec7-img">
+         <img src="./images/front-page-team-1.jpg" alt="">
+      </div>
+      <div class="info2">
+      <h1>Mark Lawrance</h1>
+      <h2>Web Designer</h2>
+      <p>Creative, detail-oriented, always focused.</p>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-linkedin"></i>
+      </div>
+   </div>
+   <div class="sec7-child2 sec7-child">
+      <div class="sec7-img">
+         <img src="./images/front-page-team-2.jpg" alt="">
+      </div>
+      <div class="info2">
+      <h1>Jene stonet</h1>
+      <h2>SEO Specialist</h2>
+      <p>Curious, tech-geeck and gets serious when comes to work.</p>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-linkedin"></i>
+      </div>
+   </div>
+   <div class="sec7-child3 sec7-child">
+      <div class="sec7-img">
+         <img src="./images/front-page-team-3.jpg" alt="">
+      </div>
+      <div class="info2">
+      <h1>John Smith</h1>
+      <h2>Developer</h2>
+      <p>Enthusiastic, passionate with great sense of humor.</p>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-linkedin"></i>
+      </div>
+   </div>
+       </div>
+</section>
+
+<section id="sec8">
+   <h1>Contact US</h1>
+   <h2 class="add1">Address</h2>
+   <p class="add2">Street 221B Baker Street,
+      London, UK</p>
+
+   <h2 class="add3">Customer Support</h2>
+   <p class="add4">E-mail: contact@site.com
+      Phone: (555) 555-5555</p>
+      <div class="input">
+         <label for="name">Your Name (required)</label>
+         <input id="name" type="text">
+      </div>
+
+      <div class="input">
+         <label for="name">Your Email (required)</label>
+         <input id="name" type="text">
+      </div>
+      <div class="input">
+         <label for="name">Subject</label>
+         <input id="name" type="text">
+      </div>
+
+      <div class="input2">
+         <label for="name">Your Message</label>
+         <input id="name" type="text">
+      </div>
+
+      <button class="send">Send</button>
+</section>
+
+<section class="sec9">
+   <div class="products last">
+      <h1>PRODUCTS</h1>
+      <p>> Our work</p>
+      <p>> Club</p>
+      <p>> News</p>
+      <p>> Blog</p>
+   </div>
+   <div class="information last">
+      <h1>INFORMATION</h1>
+      <p>> Our work</p>
+      <p>> Club</p>
+      <p>> News</p>
+      <p>> Blog</p>
+   </div>
+   <div class="support last">
+      <h1>SUPPORT</h1>
+      <p>> Our work</p>
+      <p>> Club</p>
+      <p>> News</p>
+      <p>> Blog</p>
+   </div>
+   <div class="copy">
+      <h5> <span style="color:#8C9597 ;">Theme: Illdy.</span> © Copyright 2017. All Rights Reserved.</h5>
+   </div>
+</section>
+</body>
+</html>
